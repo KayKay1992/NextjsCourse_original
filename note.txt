@@ -1,5 +1,6 @@
-Layout
+Route Groups
+Lets say you dont want the root layout to appear in the dashboard route and only show up in the none dashboard route like home, about and contact routes etc this means that you need a separate navbar for the dashboard route and the one for none dashboard route, in such scenerio you can use route groups.
+they allow you to you to organise your route segment without impacting your url path, you do this by wrapping the folder name inside perentesis (), lets create 2 different folders. we created dashboard folder in perentesis and root also in perentesis. we move the dashboard folder to dashboard in perentesis and page to root folder in perentesis. the essense of this is to be be able to give its route group its own layout and it helps to organise your work.
 
-Earlier we learnt that layout.txx file is starting app to demonstatrate this, we added root before rendering the children in the layout.tsx file, you will see that the root appears on all the pages we use layout to render stuff like navbar and a footer. layout.tsx act like parents to all of the routes available. in nextjs root layout is required but you can create your own customized layout, lets say you want to created a customixed layout for your dashboard, we can do that by adding another layout.tsx in the dashboard folder the name has to be layout. creating a new layout is as simple as creating a functional component  and passing the children props. 
-Now every route under dashboard route has an additional navbar layout.
+
 
