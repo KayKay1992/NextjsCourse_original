@@ -1,12 +1,5 @@
-Routing
-Nextjs uses a file base routing system. currently we only have one route which is page.tsx the home homepage, how do we create a new route?
-this is as simple as creating a new folder and a file, it uses and intuitive file base routing system where folders are used to define routes, the folder name e.g about becomes the route name and page.tsx becomes the file rendered for that route. 
+Layout
 
-Nested routes:
-assuming u are creating a dashboard, and you want stuff like dashboard/users and dashboard/analytics ofcourse you can't create 2 folders with the same name this is where nested route come in handy.
-in this case you will create a folder called dashboard, then in this folder you will create another 2 folders called users and analytics, each of this folder now will contain special file, ofcouse the files can have same name.
+Earlier we learnt that layout.txx file is starting app to demonstatrate this, we added root before rendering the children in the layout.tsx file, you will see that the root appears on all the pages we use layout to render stuff like navbar and a footer. layout.tsx act like parents to all of the routes available. in nextjs root layout is required but you can create your own customized layout, lets say you want to created a customixed layout for your dashboard, we can do that by adding another layout.tsx in the dashboard folder the name has to be layout. creating a new layout is as simple as creating a functional component  and passing the children props. 
+Now every route under dashboard route has an additional navbar layout.
 
-Dynamic Routes: what if you want to display each users profile in the dashboard, lets say we have 4 users and you want to display the each users profile stuff like dashboard/users/user-1, dashboard/users/user-2 etc we cant create this folders/route manually as we dont know how many users we have, this is what dynamic rrouting is all about. A route where part of the url can change or be dynamic specifically by the users input or data available, Creating dynamic route in nextjs is simmple all you have to do is wrap the part of url that changes in square bracket e.g dashboard/users/[user-1].
-to experiment this in our users folder/route we created a new folder which will act as dynamic route [id] we created the file too page.tsx. after creating the file and separating our users with clickable links
-
-how do we then extract the dynamic parameter into our user details page. we pass params as props destructured in our user details page, since we are using typescrypt. we will define the type of param we are destructuring. then we destructure the id from params. thats how it works now you can use the id and fetch all the user details.
