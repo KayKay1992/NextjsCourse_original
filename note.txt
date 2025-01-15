@@ -1,10 +1,12 @@
-React Server components .
-These are components that are rendered and their html/css output is rendered in client side. Since they are rendered on the serever they can access server side resources directly like database and the file sysytem this helps to reduce the amount of javascript sent to the client improving performance.
+Routing
+Nextjs uses a file base routing system. currently we only have one route which is page.tsx the home homepage, how do we create a new route?
+this is as simple as creating a new folder and a file, it uses and intuitive file base routing system where folders are used to define routes, the folder name e.g about becomes the route name and page.tsx becomes the file rendered for that route. 
 
-Why cant everything now be server side component since they are of great imortance. if your component involves button and everyother interactivity then we need also a client side component.
+Nested routes:
+assuming u are creating a dashboard, and you want stuff like dashboard/users and dashboard/analytics ofcourse you can't create 2 folders with the same name this is where nested route come in handy.
+in this case you will create a folder called dashboard, then in this folder you will create another 2 folders called users and analytics, each of this folder now will contain special file, ofcouse the files can have same name.
 
-What are react Client Component ?
-they are components that are rendered in client side. in this case client side simply means the browser to use them in Next.js you must add a use client directive at the top of the project. 
-So we created a new folder in app folder called component folder then we created a new file which is hello.tsx to test the client component 
-use the component in page.tsx and you will find out that when you run your terminal, the hello component will be rendered in both in server side (terminal) and client side(browser/console.) due to the hydrating ability. that means everything on the client side that doesnt require interactivity(like button, search function) is still run on the server side. this is what is referered to as server side rerendring in Nextjs.
+Dynamic Routes: what if you want to display each users profile in the dashboard, lets say we have 4 users and you want to display the each users profile stuff like dashboard/users/user-1, dashboard/users/user-2 etc we cant create this folders/route manually as we dont know how many users we have, this is what dynamic rrouting is all about. A route where part of the url can change or be dynamic specifically by the users input or data available, Creating dynamic route in nextjs is simmple all you have to do is wrap the part of url that changes in square bracket e.g dashboard/users/[user-1].
+to experiment this in our users folder/route we created a new folder which will act as dynamic route [id] we created the file too page.tsx. after creating the file and separating our users with clickable links
 
+how do we then extract the dynamic parameter into our user details page. we pass params as props destructured in our user details page, since we are using typescrypt. we will define the type of param we are destructuring. then we destructure the id from params. thats how it works now you can use the id and fetch all the user details.
