@@ -1,30 +1,10 @@
-Installing next we first created a folder in our deskstop and open througn ur IDE (vscode), the we ran npx create-next-app@latest.
-we accepted the tools we are going to use and then give our project a name. then we install them.
+React Server components .
+These are components that are rendered and their html/css output is rendered in client side. Since they are rendered on the serever they can access server side resources directly like database and the file sysytem this helps to reduce the amount of javascript sent to the client improving performance.
 
-workthrough 
-tsConfig.json: this is a configuration file for typescrypt, it defines what should be typechecked , ignored and the rules to follow.
+Why cant everything now be server side component since they are of great imortance. if your component involves button and everyother interactivity then we need also a client side component.
 
-tailwind.Config.ts: this is where you can add additional tailwind set up. extens tailwinds by customization of the design like colours, fonts, shadows, plugins, etc.
+What are react Client Component ?
+they are components that are rendered in client side. in this case client side simply means the browser to use them in Next.js you must add a use client directive at the top of the project. 
+So we created a new folder in app folder called component folder then we created a new file which is hello.tsx to test the client component 
+use the component in page.tsx and you will find out that when you run your terminal, the hello component will be rendered in both in server side (terminal) and client side(browser/console.) due to the hydrating ability. that means everything on the client side that doesnt require interactivity(like button, search function) is still run on the server side. this is what is referered to as server side rerendring in Nextjs.
 
-ReadMe: this is a file that explains how to run the project.
-
-postCss.config.mjs: this is a configuration file for postcss, it is used to process css due to plugins, in our case it uses tailwind css as plugin which allows us to use utility classes in our project.
-
-package-lock.json: this is a configuration file that locks the version of dependencies and the sub dependencies. ensuring everyone working in the project uses exact same version.
-
-package.json: this is a configuration file that contains all the current dependencies, including the starting scripts
-
-next-env.d.ts: this is a configuration file that contains reference and it should not be editted, it is specifically for next js.
-
-next.config.ts: this is a configuration file that allows you to configure next js features so it should be edited.
-
-.gitignore: this is a configuration file that what ever you dont want to be stored in git 
-
-pubic folder: this folder contains static assets. always put your images and other static data here.
-
-node-modules: very heavy file that contains all the dependencies, packages  needed to run your application.
-
-App folder: the most important folder in every next js application. it contains the primary homepage page.tsx.
-at this point start your project by running npm run dev in your terminal. then click on the local port to see it on the browser. To edit what you are interested in you can just remove everything in the return of page.tsx and return justa h1 tag.
-other files in app folder include favicon.ico it hosts the image that appears in your app title. 
-globals.css for tailwind css styling and layout.tsx which is the main entry point for your application. anything you do here will be applied in all pages and route, thats why here we are importing the styles, fonts, and metadata, it should host the nav.
