@@ -1,6 +1,10 @@
-Route Groups
-Lets say you dont want the root layout to appear in the dashboard route and only show up in the none dashboard route like home, about and contact routes etc this means that you need a separate navbar for the dashboard route and the one for none dashboard route, in such scenerio you can use route groups.
-they allow you to you to organise your route segment without impacting your url path, you do this by wrapping the folder name inside perentesis (), lets create 2 different folders. we created dashboard folder in perentesis and root also in perentesis. we move the dashboard folder to dashboard in perentesis and page to root folder in perentesis. the essense of this is to be be able to give its route group its own layout and it helps to organise your work.
+ERROR HANDLING.
+
+This catches error and displays it in the ui. similar to how we created multiple layout files we can do the same for error.tsx files 
+only the closest error file takes priority you can set error for a each route or you can create a a globalerror handler. 
+
+LOADING UI: 
+it works similarly to error handling, you want to show some loading effect in the ui 
 
 
 
