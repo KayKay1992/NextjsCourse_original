@@ -1,10 +1,18 @@
-ERROR HANDLING.
+Data Fetching
 
-This catches error and displays it in the ui. similar to how we created multiple layout files we can do the same for error.tsx files 
-only the closest error file takes priority you can set error for a each route or you can create a a globalerror handler. 
+Our traditional way of fetching content is using a useEffect.
+there is a more efficient way 
+a. you declare a new functional component.
+b. and immediately at the top of it you make a fetch request.
+c. you check if it fails
+d. if it doesnt you simply declare it.
+e. and set the res.json
+f. you map over it in return and displays it.
 
-LOADING UI: 
-it works similarly to error handling, you want to show some loading effect in the ui 
-
-
+serverside fetching improves initail load time i.e it loads faster.
+it offers better SEOs i.e search engine opimization.
+server side fetching offers simplified logic.
+it also stops duplicating request from being made
+improved security because api calls are done on the server.
+Even if javascript is turned off in the browser server side fetching will still work.
 
