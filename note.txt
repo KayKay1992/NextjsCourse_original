@@ -1,9 +1,15 @@
-Static Site Generation (SSG)
+Server Side Rendering (SSR)
 
-Atechnique where html are generated,this means the content is created when you deploy your site not when you user requested, it can be extremely fast and can be served from a cdn but it is not suitable for website that is frequently ubdated content by default nextjs uses a static rendering stratagy.the result is catched and delivered and can be pushed to a content delivery network(cdn ) ideally ypu use this strategy for blogs, documentation sites but in many cases you have to go for incremental static regneration (isr), it is an extension of ssg that allows you to update static content after you must have built your site. they combine the benefit of ssg with ability to refresh your site.
+it Updates frequently, it used mostly when you need real time data on your page. just like ssg that is time bound you can set the revalidation time to 0.
 
-if you want to use the isr strategy you can do this in two ways, the first one is time based revalidation, you can revalidate your entire page after some time by simply exporting a varible called revalidate and set it the number of seconds you want it to revalidate. 
+Ppr partial prerendering method it combines static and dynamic rendering.
 
-the second one is to revalidate your request after some time.
 
+Nextjs Backend routing: API ROUTE CREATION
+
+for you to create a backend route is super simple in nextjs create a special folder like api, then create a route.ts inside it and from there you can immmediately begin writing your server code.
+export async function GET() and return response.json.
+Then how do you create other api endpoints like Post, put, patch and delete. for that lets create a book  endpoint with a local array as a data base.
+
+for delete endpoint you have to create a dynamic route handler
 
